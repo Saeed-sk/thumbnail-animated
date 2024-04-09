@@ -1,0 +1,531 @@
+@import "font/font.css";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+
+.thumb_container {
+    font-family: "Poppins";
+    position: relative;
+    min-width: 800px;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #2f1f1f;
+    z-index: 0;
+    overflow: clip;
+}
+
+.nav {
+    float: right;
+    margin: 34px 100px;
+}
+
+.nav > ul > li > a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.nav > ul {
+    display: flex;
+    list-style: none;
+    color: whitesmoke;
+    gap: 20px;
+}
+
+.nav > ul > li {
+    font-size: 16px;
+}
+
+.nav_selected {
+    display: flex;
+    align-items: end;
+    padding-bottom: 4px;
+    position: relative;
+    bottom: 30px;
+    background: linear-gradient(180.64deg, rgba(253, 198, 1, 0.8) 0.55%, #FDCC00 0.56%, rgba(253, 199, 1, 0) 74.73%) no-repeat;
+    width: 100%;
+    height: 60px;
+}
+
+.firstSlideBackgroundEffect {
+    filter: blur(150px);
+    opacity: 100%;
+    inset: 50%;
+    translate: -50% -55%;
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    z-index: -100;
+    background-color: whitesmoke;
+    border-radius: 100%;
+}
+
+.eclipse_01 {
+    clip-path: ellipse(0% 0% at 100% 100%);
+    position: absolute;
+    translate: -50% -55%;
+    inset: 50%;
+    z-index: -80
+}
+
+.eclipse_02 {
+    clip-path: ellipse(0% 0% at 100% 0%);
+    position: absolute;
+    translate: -50% -55%;
+    inset: 50%;
+    z-index: -90;
+}
+
+.eclipse_03 {
+    clip-path: ellipse(0% 0% at 100% 100%);
+    position: absolute;
+    translate: -50% -55%;
+    inset: 50%;
+    z-index: -80
+}
+
+.eclipse_04 {
+    clip-path: ellipse(0% 0% at 100% 0%);
+    position: absolute;
+    translate: -50% -55%;
+    inset: 50%;
+    z-index: -90
+}
+
+.eclipse_05 {
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    translate: -50% -55%;
+    inset: 50%;
+    z-index: -100;
+    mask-composite: subtract;
+    opacity: 0;
+}
+
+.maskRect {
+    clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 100% 100%, 100% 0%);
+}
+
+.eclipse_parent {
+    opacity: 0;
+    position: absolute;
+    translate: -50% -55%;
+    inset: 50%;
+    scale: 0.6;
+    z-index: -70;
+}
+
+.mask {
+    mask-image: url("./images/texture.png");
+    -webkit-mask-image: url("./images/texture.png");
+    mask-size: 1000px;
+}
+
+.firstSlideCenterImage {
+    opacity: 0;
+    position: absolute;
+    translate: -50% -45%;
+    inset: 50%;
+    z-index: -60;
+}
+
+.center_text {
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+    translate: -40% 400%;
+    inset: 50%;
+    z-index: -60;
+}
+
+.fe_img {
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+    translate: 35% 348%;
+    inset: 50%;
+    z-index: -70;
+}
+
+.firstSlideBottomShadow {
+    opacity: 0;
+    z-index: -80;
+    background-color: black;
+    position: absolute;
+    width: 250px;
+    height: 40px;
+    bottom: 10%;
+    border-radius: 100%;
+    translate: -50% 0;
+    left: 50%;
+    filter: blur(8px);
+}
+
+.secondSlideTopEffect {
+    opacity: 0;
+    z-index: -40;
+    position: absolute;
+    top: -10px;
+    filter: blur(150px);
+    border-radius: 100%;
+    background: #F4E641;
+    height: 200px;
+    width: 100%;
+}
+
+.firstSlideTextBox, .secondSlideTextBox {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: start;
+    color: whitesmoke;
+    height: 200px;
+    max-width: 330px;
+    position: absolute;
+    bottom: 38%;
+    left: 12%;
+    z-index: 100;
+}
+
+.firstSlideTextBox h2 {
+    font-size: 32px;
+}
+
+.secondSlideTextBox h2 {
+    font-size: 32px;
+}
+
+.firstSlideTextBox p {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.secondSlideTextBox p {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.firstSlideTextBox a {
+    margin: 10px 5px;
+    background-color: whitesmoke;
+    text-decoration: none;
+    color: #3B2F01;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.secondSlideTextBox a {
+    margin: 10px 5px;
+    background-color: whitesmoke;
+    text-decoration: none;
+    color: #3B2F01;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.circle01 {
+    scale: 0;
+    width: 40px;
+    height: 40px;
+    border: solid 8px whitesmoke;
+    border-radius: 100%;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+}
+
+.circle02 {
+    scale: 0;
+    width: 72px;
+    height: 72px;
+    border: solid 5px whitesmoke;
+    border-radius: 100%;
+    position: absolute;
+    left: 63%;
+    top: 20%;
+}
+
+.circle03 {
+    scale: 0;
+    width: 30px;
+    height: 30px;
+    border: solid 10px #FE0000;
+    border-radius: 100%;
+    position: absolute;
+    right: 10%;
+    top: 20%;
+}
+
+.circle04 {
+    scale: 0;
+    width: 24px;
+    height: 24px;
+    border: solid 5px whitesmoke;
+    border-radius: 100%;
+    position: absolute;
+    left: 36%;
+    bottom: 34%;
+}
+
+.firstSlideTextParagraph, .firstSlideTextHeader, .secondSlideTextParagraph, .secondSlideTextHeader {
+    opacity: 0;
+}
+
+.firstSlideTextButton, .secondSlideTextButton {
+    position: relative;
+    z-index: 9999;
+    scale: 0;
+}
+
+.transition_circle01, .transition_circle02 {
+    display: none;
+    scale: 2;
+    width: 100vh;
+    height: 100vh;
+    position: absolute;
+    translate: -50% -50%;
+    inset: 50%;
+    background: whitesmoke;
+    border-radius: 100%;
+    opacity: 0;
+}
+
+.SecondBackgroundImage {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -60;
+    opacity: 0;
+}
+
+.SecondBackgroundImage > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.display_block {
+    display: block;
+}
+
+.firstSlideRightTextParent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+}
+
+.firstSlideRightTextParent h2 {
+    font-size: 12px;
+    font-weight: bolder;
+    line-height: 15px;
+    color: whitesmoke;
+}
+
+.firstSlideRightIcon {
+    cursor: pointer;
+    scale: 0;
+    position: relative;
+    overflow: clip;
+    height: 62px;
+    width: 62px;
+    background-color: whitesmoke;
+    border-radius: 100%;
+}
+
+.Polygon06 {
+    position: absolute;
+    translate: -100% -50%;
+    top: 50%;
+}
+
+.bottomIcon {
+    color: whitesmoke;
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    translate: -50% 0;
+    left: 50%;
+    bottom: 20px;
+}
+
+.secondSlideButtonsParent {
+    opacity: 0;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.secondSlideButtonsParent .button01 {
+    background-color: #F4E641;
+    border-radius: 4px;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.secondSlideButtonsParent .button02 {
+    background-color: #00FF01;
+    border-radius: 4px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
+    color: whitesmoke;
+}
+
+.secondSlideButtonsParent .button03 {
+    background-color: #FE0000;
+    border-radius: 4px;
+    text-align: center;
+    width: 27px;
+    line-height: 27px;
+    height: 27px;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.button03, .button02, .button01 {
+    overflow: hidden;
+    position: relative;
+}
+
+.secondSlideRightTextParent {
+    opacity: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: -5%;
+    bottom: 25%;
+    rotate: -90deg;
+}
+
+.secondSlideRightTextParent h2 {
+    font-size: 64px;
+    color: whitesmoke;
+}
+
+.secondSlideRightTextParent h4 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #8E8E8E;
+}
+
+.button01_num, .button02_num, .button03_num {
+    position: absolute;
+    translate: -50%;
+    left: 50%;
+
+}
+
+.secondSlideRightBottomText {
+    display: inline-flex;
+    gap: 5px;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+.secondSlideRightBottomText h4 {
+    color: #747539;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.secondSlideRightBottomLine {
+    clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%);
+}
+
+.secondSlideRightBottomTextHeader {
+    opacity: 0;
+}
+
+.movieSliderContainer {
+    width: 390px;
+    height: 250px;
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+}
+
+.movieSliderContainerParent{
+    width:100%;
+    height: 100%;
+}
+.displayNone{
+    visibility: hidden;
+}
+.playIconWithBackground {
+    position: absolute;
+    translate: -50% -50%;
+    inset: 50%;
+    z-index: 10;
+}
+
+.swiper-slide {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+}
+
+.swiper-slide {
+    position: relative;
+    opacity: 1;
+    filter: blur(2px);
+    overflow: hidden;
+    border-radius: 20px;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.swiper-slide-active {
+    filter: blur(0px) !important;
+}
+
+.swiper-slide .movieSliderText {
+    position: absolute;
+    padding: 10px 30px;
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(40px);
+    bottom: 0;
+}
+
+.swiper-slide > .movieSliderImage {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide h3 {
+    color: whitesmoke;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.swiper-slide p {
+    opacity: 70%;
+    color: whitesmoke;
+    font-size: 16px;
+    font-weight: 200;
+}
